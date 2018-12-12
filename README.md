@@ -1,5 +1,7 @@
 # Example for usage of gostream
 
+![builds.sr.ht status](https://builds.sr.ht/~biosmarcel/gostreamexample/arch.yml.svg)](https://builds.sr.ht/~biosmarcel/gostreamexample/arch.yml?)
+
 This repository demonstrates how to use
 [gostream](https://github.com/Bios-Marcel/gostream).
 
