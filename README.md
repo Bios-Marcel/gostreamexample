@@ -26,6 +26,7 @@ In order to execute this example locally, run the following commands:
 3. Generate the necessary code
     ```shell
     cd $GOPATH/src/github.com/Bios-Marcel/gostreamexample
+    go get -v -u github.com/Bios-Marcel/gostream
     genny -in="$GOPATH/src/github.com/Bios-Marcel/gostream/stream.go" -out="stream/stream.go" -pkg="stream" gen "GenericStreamEntity=string"
     ```
 4. Run the test
