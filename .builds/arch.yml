@@ -5,13 +5,16 @@ tasks:
   - setup: |
       export GOPATH=$PWD
       export PATH=$PATH:$GOPATH/bin
-  - pull: |
-      go get -v -u github.com/Bios-Marcel/gostreamexample
+
       go get -v -u github.com/Bios-Marcel/gostream
       go get -v -u github.com/cheekybits/genny
       go install github.com/cheekybits/genny
-  - build: |
+
+      mkdir -p $GOPATH/src/github.com/Bios-Marcel/
+      git clone https://github.com/Bios-Marcel/gostreamexample $GOPATH/src/github.com/Bios-Marcel/gostreamexample
       cd src/github.com/Bios-Marcel/gostreamexample
       #Generate specific files out of generic ones
       genny -in="$GOPATH/src/github.com/Bios-Marcel/gostream/stream.go" -out="stream/stream.go" -pkg="stream" gen "GenericStreamEntity=string"
+
+      go get -v -d github.com/Bios-Marcel/gostreamexample
       go run main.go
