@@ -30,5 +30,5 @@ In order to execute this example locally, run the following commands:
     ```
 4. Run the test
     ```shell
-    go test
+    go run main.go
     ```

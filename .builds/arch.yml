@@ -13,4 +13,4 @@ tasks:
       cd src/github.com/Bios-Marcel/gostreamexample
       #Generate specific files out of generic ones
       genny -in="$GOPATH/src/github.com/Bios-Marcel/gostream/stream.go" -out="stream/stream.go" -pkg="stream" gen "GenericStreamEntity=string"
-      go test
+      go run main.go
