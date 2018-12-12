@@ -1,0 +1,16 @@
+image: archlinux
+packages:
+  - go
+tasks:
+  - setup: |
+      export GOPATH=$PWD
+      export PATH=$PATH:$GOPATH/bin
+  - pull
+      go get -v -u github.com/Bios-Marcel/gostreamexample
+      go get -v -u github.com/cheekybits/genny
+      go install github.com/cheekybits/genny
+  - build: |
+      cd src/github.com/Bios-Marcel/gostreamexample
+      #Generate specific files out of generic ones
+      genny -in="$GOPATH/src/github.com/Bios-Marcel/gostream/stream.go" -out="stream/stream.go" -pkg="stream" gen "GenericStreamEntity=string"
+      go test
