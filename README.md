@@ -23,7 +23,7 @@ In order to execute this example locally, run the following commands:
     ```
 2. Get the source
     ```shell
-    go get -v -u github.com/Bios-Marcel/gostreamexample
+    git clone https://github.com/Bios-Marcel/gostreamexample $GOPATH/src/github.com/Bios-Marcel/gostreamexample
     ```
 3. Generate the necessary code
     ```shell
