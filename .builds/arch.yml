@@ -10,7 +10,6 @@ tasks:
       go get -v -u github.com/cheekybits/genny
       go install github.com/cheekybits/genny
 
-      mkdir -p $GOPATH/src/github.com/Bios-Marcel/
       git clone https://github.com/Bios-Marcel/gostreamexample $GOPATH/src/github.com/Bios-Marcel/gostreamexample
       cd src/github.com/Bios-Marcel/gostreamexample
       #Generate specific files out of generic ones
